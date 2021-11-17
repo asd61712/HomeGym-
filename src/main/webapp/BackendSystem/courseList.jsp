@@ -199,9 +199,11 @@
 						         	<c:if test="${pageBean.currentPage != pageBean.totalPage && pageBean.totalPage != 0}">
 						         	<c:choose>
 						        	   <c:when  test="${!empty param.status&&!empty param.partOfBody}">
-						        				<li class="page-item">
-						        				<a class="page-link" href="<c:url value='${servletPath}?status=${param.status}&partOfBody=${param.partOfBody}&pageNo=${pageBean.currentPage+1}'/>">${page}</a>
-						        				</li>
+						        				
+						        				<a class="page-link" href="<c:url value='${servletPath}?status=${param.status}&partOfBody=${param.partOfBody}&pageNo=${pageBean.currentPage+1}'/>" aria-label="Next">
+						        				<span aria-hidden="true">&raquo;</span>
+						          				</a>
+						 
 						        	</c:when>
 						          		<c:when  test="${!empty param.inputValue}">
 						         			<a class="page-link" href="<c:url value='${servletPath}?inputValue=${param.inputValue}&checked=${param.checked}&pageNo=${pageBean.currentPage+1}' />" aria-label="Next">
