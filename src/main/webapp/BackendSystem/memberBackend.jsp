@@ -148,9 +148,8 @@
 						        				</li>
 						        			</c:when>
 						        			<c:when  test="${!empty param.role}">
-						        				<li class="page-item">
-						        				<a class="page-link" href="<c:url value='${servletPath}?role=${param.role}&pageNo=${page}'/>">${page}</a>
-						        				</li>
+						        				<a class="page-link"
+														href="<c:url value='${servletPath}?pageNo=${page}'/>">${page}</a>
 						        			</c:when>
 						        			<c:otherwise>
 						        			<!-- 將當前頁數反藍 -->
